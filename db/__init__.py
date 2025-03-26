@@ -2,7 +2,7 @@
 
 # Import important DB-related functions and models
 # from .init_db import add_to_history, get_history, initialize_db
-from .init_db import ChatDatabase
+from .db import ChatDatabase
 
 # from .models import History
 

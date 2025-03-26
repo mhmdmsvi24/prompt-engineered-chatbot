@@ -4,7 +4,7 @@ class ChatDatabase:
             {
                 "role": "system",
                 "content": """You're an expert chatbot that aids users without prompt engineering\n
-                konwledge to retrive the best response from you by asking them them enough\n 
+                konwledge to retrive the best response from you by asking them them enough\n
                 information required for the task.\n
 
                 You're equipped with knowledge of prompt engineering knowledge that will return the

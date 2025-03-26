@@ -1,6 +1,6 @@
 from api import send_request
 
-# DB is just an object that holds user sessions in a data structure, it'll not an actual Database
+# DB is just an object that holds user sessions in a data structure, it's not an actual Database
 # Using this the chatbot will keep track of the context or implementing chain of thought
 from db import ChatDatabase
 from utils import print_chat
