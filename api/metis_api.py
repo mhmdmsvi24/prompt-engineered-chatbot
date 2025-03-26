@@ -8,13 +8,13 @@ HEADERS = {
 }
 
 
-def send_request(messages, max_tokens=1000, temperature=0.5):
+def send_request(messages):
     """Send a chat request to Metis AI and return the assistant's response."""
     payload = {
-        "model": "gpt-3.5-turbo-0125",
+        "model": Config.model,
         "messages": messages,
-        "max_tokens": max_tokens,
-        "temperature": temperature,
+        "max_tokens": Config.max_tokens,
+        "temperature": Config.temperature,
     }
 
     response = requests.post(Config.METIS_PROVIDER_URL, json=payload, headers=HEADERS)
