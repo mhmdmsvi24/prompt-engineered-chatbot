@@ -1,4 +1,5 @@
 from api import send_request
+from config import Config
 
 # DB is just an object that holds user sessions in a data structure, it's not an actual Database
 # Using this the chatbot will keep track of the context or implementing chain of thought
@@ -12,9 +13,10 @@ db = ChatDatabase()
 print("Welcome to the chatbot! Type 'exit' to quit.\n")
 
 while True:
-    user_input = input("\033[1;34mYou: \033[0m")
-    if user_input.lower() == "exit":
-        print("\nGoodbye!")
+    user_input = print_chat("user")
+
+    if user_input.find("exit") != -1:
+        break
 
     # Add user message to history
     db.add_message("user", user_input)

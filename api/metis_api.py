@@ -1,10 +1,10 @@
 import requests
 
-from config import METIS_API_KEY, METIS_PROVIDER_URL
+from config import Config
 
 HEADERS = {
     "Content-Type": "application/json",
-    "Authorization": METIS_API_KEY,
+    "Authorization": Config.METIS_API_KEY,
 }
 
 
@@ -17,7 +17,7 @@ def send_request(messages, max_tokens=1000, temperature=0.5):
         "temperature": temperature,
     }
 
-    response = requests.post(METIS_PROVIDER_URL, json=payload, headers=HEADERS)
+    response = requests.post(Config.METIS_PROVIDER_URL, json=payload, headers=HEADERS)
 
     if response.status_code == 200:
         bot_response = response.json()
